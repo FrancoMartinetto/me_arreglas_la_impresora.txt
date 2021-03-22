@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  background: #e7e7e7;
+  width: 100vw;
+  height: 100vh;
+}
+
+body header {
+  width: 60vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+body header .logo img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.3rem;
+}
+
+body header .nav_menu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+body header .nav_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+body header .nav_menu ul li {
+  -webkit-perspective: 10rem;
+          perspective: 10rem;
+  margin: 0 2rem;
+}
+
+body header .nav_menu ul li button {
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  background: none;
+  font-weight: bold;
+  font-size: 18;
+  opacity: 0.9;
+  cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  outline: none;
+}
+
+body header .nav_menu ul li button:hover {
+  opacity: 0.4;
+  -webkit-transform: translate3d(0, 0, 0.3rem);
+          transform: translate3d(0, 0, 0.3rem);
+}
+
+body main {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+body main .cards_container {
+  padding: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.card {
+  height: 480px;
+  position: relative;
+  -webkit-box-shadow: 0 2px 16px #ccc;
+          box-shadow: 0 2px 16px #ccc;
+}
+
+.card .card_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .card_description {
+  opacity: 0;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font: 1em sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.card .card_description:hover {
+  opacity: 1;
+}
+
+.card .card_description .card_title {
+  font-size: 22;
+}
+
+.card .card_description .card_text {
+  font-size: 16;
+}
+
+#pre_loader_1 {
+  font-family: 'Raleway', sans-serif;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: black;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 3rem;
+  color: #e7e7e7;
+}
+
+#pre_loader_1.loaded {
+  -webkit-animation: slide-left 1s forwards;
+          animation: slide-left 1s forwards;
+}
+
+#pre_loader_2 {
+  font-family: 'Raleway', sans-serif;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: black;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 3rem;
+  color: #eb7567;
+}
+
+#pre_loader_2.loaded {
+  -webkit-animation: slide-right 1s forwards;
+          animation: slide-right 1s forwards;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
