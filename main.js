@@ -2,22 +2,22 @@ let cards = [
   {
     title: 'Card title1',
     description: 'Card description',
-    img: './rscs/kelly.jpg',
+    img: './images/kelly.jpg',
   },
   {
     title: 'Card title2',
     description: 'Card description',
-    img: './rscs/kelly.jpg',
+    img: './images/kelly.jpg',
   },
   {
     title: 'Card title3',
     description: 'Card description',
-    img: './rscs/kelly.jpg',
+    img: './images/kelly.jpg',
   },
   {
     title: 'Card title4',
     description: 'Card description',
-    img: './rscs/kelly.jpg',
+    img: './images/kelly.jpg',
   },
 ];
 document.addEventListener('DOMContentLoaded', function () {
