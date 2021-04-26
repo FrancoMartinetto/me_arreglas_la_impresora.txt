@@ -1,81 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-$primary: #8ea4d2;
-$secondary: #466362;
-$terciary: #466362;
-$light: #2de1c2;
-$dark: #1c0b19;
+$primary: #eb7567;
+$secondary: #57899d;
+$terciary: #f7f3e4;
+$light: #e7e7e7;
+$dark: #9b9275;
+$white: #fff;
+$black: #000;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
-body {
-  width: 100vw;
-  height: 100%;
-  min-height: 100vh;
-  max-width: 100%;
-  background: $secondary;
 
-  header {
-    display: flex;
-    align-items: center;
-    width: 70vw;
-    margin: 0 auto;
-    .logo {
-      img {
-        width: 200px;
-        height: 55px;
-        border-radius: 0.5rem;
+// @media only screen and (min-width:320px) {
+// }
+// @media only screen and (min-width: 481px) {
+// }
+// @media only screen and (min-width: 769px) {
+// }
+// @media only screen and (min-width: 1025px) {
+// }
+// @media only screen and (min-width: 1201px) {
+// }
+
+@media only screen and (min-width: 320px) {
+  body {
+    font-size: 62.5%;
+    background: $light;
+    max-width: 100%;
+    max-height: 100%;
+    header {
+      padding: 0 4rem;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      .logo {
+        img {
+          width: 7rem;
+          height: 7rem;
+          border-radius: 0.3rem;
+        }
+      }
+      .navMenu {
+        display: none;
+        flex-grow: 1;
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          list-style: none;
+          li {
+            perspective: 10rem;
+            margin: 0 2rem;
+          }
+        }
       }
     }
-    .navMenu {
-      flex-grow: 1;
-      ul {
-        display: flex;
-        justify-content: flex-end;
-        li {
-          perspective: 100px;
+    main {
+      padding: 0 4rem;
+      width: 100%;
+      margin: 3rem 0;
+      .cards_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+      }
+    }
+  }
+
+  footer {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) {
+}
+@media only screen and (min-width: 769px) {
+  body {
+    font-size: 62.5%;
+    background: $light;
+    max-width: 100%;
+    max-height: 100%;
+    header {
+      width: 60vw;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      .logo {
+        img {
+          width: 7rem;
+          height: 7rem;
+          border-radius: 0.3rem;
+        }
+      }
+      .navMenu {
+        display: block;
+        flex-grow: 1;
+        ul {
+          display: flex;
+          justify-content: flex-end;
           list-style: none;
-          margin: 0px 7px;
+          li {
+            perspective: 10rem;
+            margin: 0 2rem;
+          }
+        }
+      }
+    }
+    main {
+      padding: 0 4rem;
+      width: 100%;
+      margin: 3rem 0;
+      .cards_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 1.5rem;
+      }
+    }
+  }
+  footer {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: white;
+    height: 15vh;
+    background: $dark;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icons {
+      i {
+        margin: 0 2rem;
+        transition: all ease 0.3s;
+        &:hover {
+          color: $light;
+          opacity: 0.9;
+          cursor: pointer;
         }
       }
     }
   }
 }
-main {
-  width: 70vw;
-  margin: 3rem auto 5rem auto;
-  padding: 20px;
-  .cards_container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    row-gap: 2rem;
-  }
+@media only screen and (min-width: 1025px) {
 }
-footer {
-  color: white;
-  height: 15vh;
-  background: $dark;
-  padding: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .icons {
-    i {
-      margin: 0 2rem;
-      transition: all ease 0.3s;
-      &:hover {
-        color: $light;
-        opacity: 0.9;
-        cursor: pointer;
+@media only screen and (min-width: 1201px) {
+  body {
+    header {
+      width: 60vw;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      .logo {
+        img {
+          width: 7rem;
+          height: 7rem;
+          border-radius: 0.3rem;
+        }
+      }
+      .navMenu {
+        flex-grow: 1;
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          list-style: none;
+          li {
+            perspective: 10rem;
+            margin: 0 2rem;
+          }
+        }
+      }
+    }
+    main {
+      width: 60vw;
+      margin: 0 auto;
+      padding: 0;
+      .cards_container {
+        padding: 3rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        row-gap: 2rem;
+      }
+    }
+  }
+
+  footer {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: white;
+    height: 15vh;
+    background: $dark;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icons {
+      i {
+        margin: 0 2rem;
+        transition: all ease 0.3s;
+        &:hover {
+          color: $light;
+          opacity: 0.9;
+          cursor: pointer;
+        }
       }
     }
   }
 }
+
 @import './_card';
 @import './_modal';
 @import './_components';
