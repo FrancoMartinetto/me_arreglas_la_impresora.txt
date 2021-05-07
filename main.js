@@ -1,23 +1,23 @@
 let cards = [
   {
-    title: 'Card title1',
-    description: 'Card description',
-    img: './images/kelly.jpg',
+    title: 'WE',
+    description: 'ANIMA/ANIMA/ANIMA/ANIMA/',
+    img: './images/9.png',
   },
   {
-    title: 'Card title2',
-    description: 'Card description',
-    img: './images/kelly.jpg',
+    title: 'BRING STORIES',
+    description: 'ANIMA/ANIMA/ANIMA/ANIMA/',
+    img: './images/8.png',
   },
   {
-    title: 'Card title3',
-    description: 'Card description',
-    img: './images/kelly.jpg',
+    title: 'FROM ALTERNATE UNIVERSES.',
+    description: 'ANIMA/ANIMA/ANIMA/FINI',
+    img: './images/7.png',
   },
   {
-    title: 'Card title4',
-    description: 'Card description',
-    img: './images/kelly.jpg',
+    title: 'Jandric for Dummies 404',
+    description: 'FFFFFFFFFFFFF',
+    img: './images/10.png',
   },
 ];
 document.addEventListener('DOMContentLoaded', function () {
