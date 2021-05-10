@@ -13,3 +13,10 @@ button {
     transform: translate3d(0, 0, 0.3rem);
   }
 }
+.menu_line {
+  width: 1.5rem;
+  height: 0.2rem;
+  margin: 0.3rem 0;
+  background-color: $white;
+  border-radius: 0.3rem;
+}

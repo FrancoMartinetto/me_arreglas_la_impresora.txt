@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   CreateCards();
   AddListenerToModalCont();
   AddListenerToCard();
+  addMenuBehaviour();
   const aboutUs = document.querySelector('#about_us');
 
   aboutUs.addEventListener('click', () => {
@@ -88,5 +89,13 @@ const CreateCards = () => {
     temporalParent.innerHTML = element;
     const cardsContainer = document.querySelector('.cards_container');
     cardsContainer.appendChild(temporalParent.firstChild);
+  });
+};
+addMenuBehaviour = () => {
+  let toggleMenuBtn = document.querySelector('.menu_container');
+  toggleMenuBtn.addEventListener('click', (ev) => {
+    let navMenu = document.querySelector('.navMenu');
+    navMenu.classList.toggle('active');
+    toggleMenuBtn.classList.toggle('active');
   });
 };

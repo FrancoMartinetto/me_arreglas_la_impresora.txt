@@ -32,7 +32,9 @@ $black: #000;
     max-width: 100%;
     max-height: 100%;
     header {
-      background-color: #f28066;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      background-color: $dark;
       border-radius: 0 0 0.5rem 0.5rem;
       height: 5rem;
       width: 100%;
@@ -41,22 +43,50 @@ $black: #000;
       align-items: center;
       .logo {
         img {
-          padding-left: 1rem;
           width: 5rem;
         }
       }
+
       .navMenu {
-        display: none;
-        flex-grow: 1;
+        z-index: 2;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: $dark;
+        width: 50%;
+        height: 100%;
+
+        display: flex;
+        flex-flow: column;
+        transition: all ease 0.5s;
+        transform: translateX(-100%);
+        &.active {
+          transform: translateX(0);
+        }
         ul {
-          display: flex;
-          justify-content: flex-end;
+          margin-top: 5rem;
           list-style: none;
           li {
-            perspective: 10rem;
-            margin: 0 2rem;
+            border-bottom: 1px $light solid;
+            .menu_btn {
+              width: 100%;
+              background: none;
+              color: white;
+              outline: none;
+              border: none;
+              font-size: 1.5rem;
+              margin: 2rem 0;
+            }
           }
         }
+      }
+
+      .menu_line {
+        width: 1.5rem;
+        height: 0.2rem;
+        margin: 0.3rem 0;
+        background-color: $white;
+        border-radius: 0.3rem;
       }
     }
     main {
@@ -79,36 +109,6 @@ $black: #000;
 }
 @media only screen and (min-width: 769px) {
   body {
-    header {
-      border-radius: none;
-      background: none;
-      width: 60vw;
-      height: 12vh;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      .logo {
-        img {
-          padding-left: 0;
-          width: 7rem;
-          height: 7rem;
-          border-radius: 0.3rem;
-        }
-      }
-      .navMenu {
-        display: block;
-        flex-grow: 1;
-        ul {
-          display: flex;
-          justify-content: flex-end;
-          list-style: none;
-          li {
-            perspective: 10rem;
-            margin: 0 2rem;
-          }
-        }
-      }
-    }
     main {
       padding: 0 4rem;
       width: 100%;
@@ -121,57 +121,59 @@ $black: #000;
       }
     }
   }
-  footer {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-    color: white;
-    height: 15vh;
-    background: $dark;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .icons {
-      i {
-        margin: 0 2rem;
-        transition: all ease 0.3s;
-        &:hover {
-          color: $light;
-          opacity: 0.9;
-          cursor: pointer;
-        }
-      }
-    }
-  }
 }
 @media only screen and (min-width: 1025px) {
-}
-@media only screen and (min-width: 1201px) {
   body {
     header {
+      border-radius: none;
+      background: none;
       width: 60vw;
+      height: 12vh;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      padding: 1rem 0;
+
       .logo {
         img {
+          padding-left: 0;
           width: 7rem;
           height: 7rem;
           border-radius: 0.3rem;
         }
       }
       .navMenu {
-        flex-grow: 1;
+        z-index: 2;
+        position: static;
+        background-color: $dark;
+        width: 50%;
+        height: 100%;
+        display: flex;
+
         ul {
-          display: flex;
-          justify-content: flex-end;
+          margin-top: 0;
           list-style: none;
           li {
-            perspective: 10rem;
-            margin: 0 2rem;
+            border-bottom: 0;
+            .menu_btn {
+              font-family: 'Raleway', sans-serif;
+              border: none;
+              background: none;
+              font-weight: bold;
+              font-size: 18;
+              opacity: 0.9;
+              cursor: pointer;
+              transition: all ease 0.3s;
+              outline: none;
+              &:hover {
+                opacity: 0.4;
+                transform: translate3d(0, 0, 0.3rem);
+              }
+            }
           }
         }
+      }
+      .menu_container {
+        display: none;
       }
     }
     main {
@@ -210,6 +212,9 @@ $black: #000;
       }
     }
   }
+}
+
+@media only screen and (min-width: 1201px) {
 }
 
 @import './_card';
