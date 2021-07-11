@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TodoItem = (props) => {
+const TaskItem = (props) => {
   return (
-    <div className="TodoItem">
+    <div className="TaskItem">
       <h3 className={props.isCompleted ? 'text-strike' : null}>
         {props.name}
         <button
@@ -17,4 +17,4 @@ const TodoItem = (props) => {
   );
 };
 
-export default TodoItem;
+export default TaskItem;

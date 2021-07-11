@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProgressBar = (props) => {
   let onlyCompletedList = props.items.filter(
-    (todoItem) => todoItem.isCompleted
+    (TaskItem) => TaskItem.isCompleted
   );
 
   return (

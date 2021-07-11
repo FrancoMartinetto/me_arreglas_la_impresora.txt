@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
@@ -45,8 +45,8 @@ body,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: medium;
   background: #e3e3e3;
   border-radius: 13px;
@@ -58,25 +58,25 @@ body,
   justify-content: center;
 }
 
-.todo-list {
+.Task_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.TodoItem {
+.TaskItem {
   width: 30rem;
   height: 2rem;
   margin: 2rem;
   background-color: #ffffff;
   border: 1px solid #f7f7f7;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
