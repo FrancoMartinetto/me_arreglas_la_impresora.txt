@@ -7,7 +7,7 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 28px;
-  color: #1a1a1a;
+
   margin: 2rem;
 }
 html,
@@ -19,6 +19,9 @@ body,
   overflow: none;
 }
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 50%;
 

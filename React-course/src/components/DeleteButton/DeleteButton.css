@@ -1,12 +1,12 @@
-.complete_btn {
-  display: flex;
-  justify-content: left;
-  background-color: yellow; /* Green */
+.DeleteButton {
+  background-color: red;
+  /* Green */
   border: none;
   color: white;
-  padding: 15px;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
+/*# sourceMappingURL=DeleteButton.css.map */
